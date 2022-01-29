@@ -22,7 +22,7 @@ def valid_anagrams(s1,s2):
             freq2[ch] = 1
 
     for key in freq1:
-        if freq1 != freq2 or key not in freq2:# im not sure if 'or key not in freq2' is necessary there, but it works anyway
+        if freq1[key] != freq2[key] or key not in freq2: # if doesnt appile same amout of times or letter is not in freq2
             return False
     return True
 
